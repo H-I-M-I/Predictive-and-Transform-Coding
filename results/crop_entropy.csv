@@ -1,0 +1,4 @@
+region,top,left,size,entropy_bits_per_pixel
+smooth background,100,20,96,3.3826007667934204
+edge-rich eye,255,250,96,7.567592199095185
+textured hair,40,250,96,5.4655045662746

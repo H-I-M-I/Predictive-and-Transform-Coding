@@ -1,0 +1,31 @@
+METHODS AND REPORT CHECKLIST
+Report maximum: 5 pages, including code snippets (no appendix exemption stated).
+Use key labeled figures, 2-5-sentence result interpretations, 1-2 code snippets
+per section, and a 5-8-sentence reflection connecting experiments to lectures.
+External support: code prepared with ChatGPT/Codex assistance; lab PDF starter
+concepts; NumPy for arrays and covariance, Pillow for grayscale and resizing,
+SciPy for orthonormal DCT/IDCT, Matplotlib for figures; Python standard library
+for Huffman trees and file operations. No third-party entropy coder was used.
+Global and prediction experiments use original-resolution grayscale inputs.
+Local entropy uses tiled windows, including smaller tiles at image boundaries.
+Crop labels identify visual structures; observed entropy need not follow label order.
+Predictor boundary handling is causal: first pixel predicted as 0, first row from
+left, first column from top. Arithmetic and Huffman decoding have been verified.
+Residual histogram displayed after +128/clipping as requested, but actual entropy
+and coding use signed residuals without clipping. Both values are recorded.
+Conditional entropy and comparison residual entropy use identical horizontal pairs.
+Transforms use resized images of maximum dimension 512, sizes divisible by 16.
+DCT keeps zigzag coefficients; KLT keeps DC plus eigenvectors by descending variance.
+KLT training patches have their own mean removed; block means are retained as DC.
+KLT is trained on the evaluated image (in-image, not independent-test performance).
+KLT basis storage is not included: this is a transform comparison, not a codec rate.
+Coefficient count includes DC, with ceil rounding. MSE uses floating reconstructions
+before display clipping; full-coefficient reconstruction is checked for exactness.
+Both total and AC-only retained energy are recorded (DC can dominate total energy).
+Entropy coding uses standalone central 256x256 crops with JPEG-LS residuals.
+Both coders use the same static empirical counts. Actual valid bit lengths include
+arithmetic termination but exclude byte padding, frequency-model and header costs.
+Binary streams, valid bit counts and models are saved for reproducibility.
+Interpret these as zero-order symbol entropy rates, not full-image compression ratios.
+
+Python 3.13.15; NumPy 2.1.3

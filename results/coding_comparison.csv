@@ -1,0 +1,4 @@
+image,source,symbols,alphabet_size,entropy_bits_per_symbol,Huffman_bits_per_symbol,arithmetic_bits_per_symbol,Huffman_bits,arithmetic_bits,both_decode_exactly,model_header_included
+clock,"JPEG-LS residuals, central 256x256 crop",65536,252,3.858179138954038,3.9008331298828125,3.858184814453125,255645,252850,True,False
+gradients,"JPEG-LS residuals, central 256x256 crop",65536,8,1.1557614081937828,1.4102325439453125,1.1557769775390625,92421,75745,True,False
+ManWoman,"JPEG-LS residuals, central 256x256 crop",65536,85,2.7791100279798497,2.7952117919921875,2.7791290283203125,183187,182133,True,False
