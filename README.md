@@ -1,4 +1,3 @@
-
 # Image Prediction, Transform and Entropy Coding
 
 This lab examines how image statistics change after spatial prediction, transform coding, and lossless entropy coding.
